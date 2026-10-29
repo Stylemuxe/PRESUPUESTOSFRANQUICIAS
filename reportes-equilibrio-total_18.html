@@ -369,6 +369,7 @@
   .oct-list li.oct-ok span{color:#15803D;font-weight:700;}
   .oct-list li.oct-warn span{color:#B45309;font-weight:600;}
   .oct-featured .oct-list li.oct-ok span{color:#5FD98A;}
+  body:not(.is-admin) .admin-only{display:none !important;}
   .calc-floor{font-size:13px;color:#15803D;font-weight:600;margin:14px 0 0;line-height:1.55;}
   .calc-avg{font-size:13px;color:var(--ink-soft);margin:14px 0 0;line-height:1.55;}
   .calc-avg b{color:var(--ink);font-family:'Sora',sans-serif;}
@@ -692,7 +693,7 @@
   <section id="calc_ajusco">
     <h2>Calculadora: meta de citas → inversión para asegurarla</h2>
     <p class="section-note">Mueve la meta de citas confirmadas para noviembre y obtén la inversión recomendada. Ya viene cargada tu meta actual de 100 citas.</p>
-      <div class="calc-disclaimer-banner">
+      <div class="calc-disclaimer-banner admin-only">
         <div class="calc-disclaimer-icon">🛡️</div>
         <div class="calc-disclaimer-body">
           <p class="calc-disclaimer-title">INCLUYE MARGEN DE SEGURIDAD DE +40%</p>
@@ -724,7 +725,7 @@
         </div>
       </div>
       <p class="calc-floor" id="calcFloor_ajusco" hidden>✓ Tu PP actual ($60,000 MXN) ya asegura esta meta. Sube la meta para ver cuánto necesitas para crecer. Nunca recomendamos bajar el presupuesto: es la base de tus resultados.</p>
-      <p class="calc-avg">Sin margen, en un mes promedio, la inversión sería de <b id="outAvg_ajusco">$49,862 MXN</b>. El margen de +40% es lo que asegura la meta.</p>
+      <p class="calc-avg admin-only">Sin margen, en un mes promedio, la inversión sería de <b id="outAvg_ajusco">$49,862 MXN</b>. El margen de +40% es lo que asegura la meta.</p>
       <div class="calc-proof">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
         <p><strong>Estos números no son una proyección al aire:</strong> salen del comportamiento real de Ajusco en los meses cerrados del año (enero–septiembre 2026): 8,281 conversaciones, $423,332 MXN invertidos y 849 citas confirmadas por Contact Center. Eso equivale a $499 MXN de inversión por cita confirmada en promedio.</p>
@@ -739,7 +740,7 @@
     <div class="oct-goal">
       <div><p class="oct-goal-l">Tu meta de citas confirmadas</p><p class="oct-goal-v">100</p></div>
       <div><p class="oct-goal-l">Inversión recomendada</p><p class="oct-goal-v">$70,000 <small>MXN</small></p></div>
-      <div><p class="oct-goal-l">Margen de seguridad incluido</p><p class="oct-goal-v">+40%</p></div>
+      <div class="admin-only"><p class="oct-goal-l">Margen de seguridad incluido</p><p class="oct-goal-v">+40%</p></div>
     </div>
     <div class="oct-grid">
       <div class="oct-card reveal">
@@ -748,7 +749,7 @@
         <p class="oct-amount">$60,000 <small>MXN</small></p>
         <p class="oct-daily">$2,000 MXN diarios</p>
         <ul class="oct-list">
-          <li><span>Citas aseguradas (con margen)</span><b>~86</b></li>
+          <li><span>Citas aseguradas</span><b>~86</b></li>
           <li><span>En un mes promedio</span><b>~120</b></li>
           <li class="oct-warn"><span>Para asegurar 100 citas se recomiendan $70,000</span></li>
         </ul>
@@ -760,7 +761,7 @@
         <p class="oct-amount">$72,000 <small>MXN</small></p>
         <p class="oct-daily">$2,400 MXN diarios</p>
         <ul class="oct-list">
-          <li><span>Citas aseguradas (con margen)</span><b>~103</b></li>
+          <li><span>Citas aseguradas</span><b>~103</b></li>
           <li><span>En un mes promedio</span><b>~144</b></li>
           <li class="oct-ok"><span>✓ Asegura tu meta de 100 citas</span></li>
         </ul>
@@ -772,14 +773,14 @@
         <p class="oct-amount">$70,000 <small>MXN</small></p>
         <p class="oct-daily">$2,333 MXN diarios</p>
         <ul class="oct-list">
-          <li><span>Citas aseguradas (con margen)</span><b>~100</b></li>
+          <li><span>Citas aseguradas</span><b>~100</b></li>
           <li><span>En un mes promedio</span><b>~140</b></li>
           <li class="oct-ok"><span>✓ Asegura tu meta de 100 citas</span></li>
         </ul>
         <p class="oct-desc">Calculada para cumplir tu meta de 100 citas aunque el mes rinda por debajo del promedio. ¿Otra meta? Usa la <a href="#calc_ajusco">calculadora</a>.</p>
       </div>
     </div>
-    <p class="section-note" style="margin:18px 0 0;">"Citas aseguradas" usa la inversión promedio por cita de enero–septiembre ($499 MXN) más el margen de seguridad de +40%. "En un mes promedio" es sin margen. Son referencias para planear, no una garantía de resultados.</p>
+    <p class="section-note" style="margin:18px 0 0;">Las citas aseguradas son una referencia para planear con base en tu desempeño real; no son una garantía de resultados.<span class="admin-only"> [Solo administrador] "Citas aseguradas" usa la inversión promedio por cita de enero–septiembre ($499 MXN) más el margen de seguridad de +40%. "En un mes promedio" es sin margen. Son referencias para planear, no una garantía de resultados.</span></p>
   </section>
 
   <footer>
@@ -1024,7 +1025,7 @@
   <section id="calc_claveria">
     <h2>Calculadora: meta de citas → inversión para asegurarla</h2>
     <p class="section-note">Mueve la meta de citas confirmadas para noviembre y obtén la inversión recomendada. Ya viene cargada tu meta actual de 124 citas.</p>
-      <div class="calc-disclaimer-banner">
+      <div class="calc-disclaimer-banner admin-only">
         <div class="calc-disclaimer-icon">🛡️</div>
         <div class="calc-disclaimer-body">
           <p class="calc-disclaimer-title">INCLUYE MARGEN DE SEGURIDAD DE +20%</p>
@@ -1056,7 +1057,7 @@
         </div>
       </div>
       <p class="calc-floor" id="calcFloor_claveria" hidden>✓ Tu PP actual ($50,000 MXN) ya asegura esta meta. Sube la meta para ver cuánto necesitas para crecer. Nunca recomendamos bajar el presupuesto: es la base de tus resultados.</p>
-      <p class="calc-avg">Sin margen, en un mes promedio, la inversión sería de <b id="outAvg_claveria">$41,896 MXN</b>. El margen de +20% es lo que asegura la meta.</p>
+      <p class="calc-avg admin-only">Sin margen, en un mes promedio, la inversión sería de <b id="outAvg_claveria">$41,896 MXN</b>. El margen de +20% es lo que asegura la meta.</p>
       <div class="calc-proof">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
         <p><strong>Estos números no son una proyección al aire:</strong> salen del comportamiento real de Clavería en los meses cerrados del año (enero–septiembre 2026): 11,135 conversaciones, $377,400 MXN invertidos y 1,117 citas confirmadas por Contact Center. Eso equivale a $338 MXN de inversión por cita confirmada en promedio.</p>
@@ -1071,7 +1072,7 @@
     <div class="oct-goal">
       <div><p class="oct-goal-l">Tu meta de citas confirmadas</p><p class="oct-goal-v">124</p></div>
       <div><p class="oct-goal-l">Inversión recomendada</p><p class="oct-goal-v">$50,500 <small>MXN</small></p></div>
-      <div><p class="oct-goal-l">Margen de seguridad incluido</p><p class="oct-goal-v">+20%</p></div>
+      <div class="admin-only"><p class="oct-goal-l">Margen de seguridad incluido</p><p class="oct-goal-v">+20%</p></div>
     </div>
     <div class="oct-grid">
       <div class="oct-card reveal">
@@ -1080,7 +1081,7 @@
         <p class="oct-amount">$50,000 <small>MXN</small></p>
         <p class="oct-daily">$1,667 MXN diarios</p>
         <ul class="oct-list">
-          <li><span>Citas aseguradas (con margen)</span><b>~123</b></li>
+          <li><span>Citas aseguradas</span><b>~123</b></li>
           <li><span>En un mes promedio</span><b>~148</b></li>
           <li class="oct-warn"><span>Para asegurar 124 citas se recomiendan $50,500</span></li>
         </ul>
@@ -1092,7 +1093,7 @@
         <p class="oct-amount">$60,000 <small>MXN</small></p>
         <p class="oct-daily">$2,000 MXN diarios</p>
         <ul class="oct-list">
-          <li><span>Citas aseguradas (con margen)</span><b>~148</b></li>
+          <li><span>Citas aseguradas</span><b>~148</b></li>
           <li><span>En un mes promedio</span><b>~178</b></li>
           <li class="oct-ok"><span>✓ Asegura tu meta de 124 citas</span></li>
         </ul>
@@ -1104,14 +1105,14 @@
         <p class="oct-amount">$50,500 <small>MXN</small></p>
         <p class="oct-daily">$1,683 MXN diarios</p>
         <ul class="oct-list">
-          <li><span>Citas aseguradas (con margen)</span><b>~125</b></li>
+          <li><span>Citas aseguradas</span><b>~125</b></li>
           <li><span>En un mes promedio</span><b>~149</b></li>
           <li class="oct-ok"><span>✓ Asegura tu meta de 124 citas</span></li>
         </ul>
         <p class="oct-desc">Calculada para cumplir tu meta de 124 citas aunque el mes rinda por debajo del promedio. ¿Otra meta? Usa la <a href="#calc_claveria">calculadora</a>.</p>
       </div>
     </div>
-    <p class="section-note" style="margin:18px 0 0;">"Citas aseguradas" usa la inversión promedio por cita de enero–septiembre ($338 MXN) más el margen de seguridad de +20%. "En un mes promedio" es sin margen. Son referencias para planear, no una garantía de resultados.</p>
+    <p class="section-note" style="margin:18px 0 0;">Las citas aseguradas son una referencia para planear con base en tu desempeño real; no son una garantía de resultados.<span class="admin-only"> [Solo administrador] "Citas aseguradas" usa la inversión promedio por cita de enero–septiembre ($338 MXN) más el margen de seguridad de +20%. "En un mes promedio" es sin margen. Son referencias para planear, no una garantía de resultados.</span></p>
   </section>
 
   <footer>
@@ -1357,7 +1358,7 @@
   <section id="calc_moderna">
     <h2>Calculadora: meta de citas → inversión para asegurarla</h2>
     <p class="section-note">Mueve la meta de citas confirmadas para noviembre y obtén la inversión recomendada. Ya viene cargada tu meta actual de 90 citas.</p>
-      <div class="calc-disclaimer-banner">
+      <div class="calc-disclaimer-banner admin-only">
         <div class="calc-disclaimer-icon">🛡️</div>
         <div class="calc-disclaimer-body">
           <p class="calc-disclaimer-title">INCLUYE MARGEN DE SEGURIDAD DE +40%</p>
@@ -1389,7 +1390,7 @@
         </div>
       </div>
       <p class="calc-floor" id="calcFloor_moderna" hidden>✓ Tu PP actual ($9,300 MXN) ya asegura esta meta. Sube la meta para ver cuánto necesitas para crecer. Nunca recomendamos bajar el presupuesto: es la base de tus resultados.</p>
-      <p class="calc-avg">Sin margen, en un mes promedio, la inversión sería de <b id="outAvg_moderna">$39,428 MXN</b>. El margen de +40% es lo que asegura la meta.</p>
+      <p class="calc-avg admin-only">Sin margen, en un mes promedio, la inversión sería de <b id="outAvg_moderna">$39,428 MXN</b>. El margen de +40% es lo que asegura la meta.</p>
       <div class="calc-proof">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
         <p><strong>Estos números no son una proyección al aire:</strong> salen del comportamiento real de Moderna en los meses cerrados del año (enero–septiembre 2026): 9,761 conversaciones, $329,002 MXN invertidos y 751 citas confirmadas por Contact Center. Eso equivale a $438 MXN de inversión por cita confirmada en promedio.</p>
@@ -1404,7 +1405,7 @@
     <div class="oct-goal">
       <div><p class="oct-goal-l">Tu meta de citas confirmadas</p><p class="oct-goal-v">90</p></div>
       <div><p class="oct-goal-l">Inversión recomendada</p><p class="oct-goal-v">$55,500 <small>MXN</small></p></div>
-      <div><p class="oct-goal-l">Margen de seguridad incluido</p><p class="oct-goal-v">+40%</p></div>
+      <div class="admin-only"><p class="oct-goal-l">Margen de seguridad incluido</p><p class="oct-goal-v">+40%</p></div>
     </div>
     <div class="oct-grid">
       <div class="oct-card reveal">
@@ -1413,7 +1414,7 @@
         <p class="oct-amount">$9,300 <small>MXN</small></p>
         <p class="oct-daily">$310 MXN diarios</p>
         <ul class="oct-list">
-          <li><span>Citas aseguradas (con margen)</span><b>~15</b></li>
+          <li><span>Citas aseguradas</span><b>~15</b></li>
           <li><span>En un mes promedio</span><b>~21</b></li>
           <li class="oct-warn"><span>Para asegurar 90 citas se recomiendan $55,500</span></li>
         </ul>
@@ -1425,7 +1426,7 @@
         <p class="oct-amount">$11,160 <small>MXN</small></p>
         <p class="oct-daily">$372 MXN diarios</p>
         <ul class="oct-list">
-          <li><span>Citas aseguradas (con margen)</span><b>~18</b></li>
+          <li><span>Citas aseguradas</span><b>~18</b></li>
           <li><span>En un mes promedio</span><b>~25</b></li>
           <li class="oct-warn"><span>Para asegurar 90 citas se recomiendan $55,500</span></li>
         </ul>
@@ -1437,14 +1438,14 @@
         <p class="oct-amount">$55,500 <small>MXN</small></p>
         <p class="oct-daily">$1,850 MXN diarios</p>
         <ul class="oct-list">
-          <li><span>Citas aseguradas (con margen)</span><b>~90</b></li>
+          <li><span>Citas aseguradas</span><b>~90</b></li>
           <li><span>En un mes promedio</span><b>~127</b></li>
           <li class="oct-ok"><span>✓ Asegura tu meta de 90 citas</span></li>
         </ul>
         <p class="oct-desc">Calculada para cumplir tu meta de 90 citas aunque el mes rinda por debajo del promedio. ¿Otra meta? Usa la <a href="#calc_moderna">calculadora</a>.</p>
       </div>
     </div>
-    <p class="section-note" style="margin:18px 0 0;">"Citas aseguradas" usa la inversión promedio por cita de enero–septiembre ($438 MXN) más el margen de seguridad de +40%. "En un mes promedio" es sin margen. Son referencias para planear, no una garantía de resultados.</p>
+    <p class="section-note" style="margin:18px 0 0;">Las citas aseguradas son una referencia para planear con base en tu desempeño real; no son una garantía de resultados.<span class="admin-only"> [Solo administrador] "Citas aseguradas" usa la inversión promedio por cita de enero–septiembre ($438 MXN) más el margen de seguridad de +40%. "En un mes promedio" es sin margen. Son referencias para planear, no una garantía de resultados.</span></p>
   </section>
 
   <footer>
@@ -1689,7 +1690,7 @@
   <section id="calc_satelite">
     <h2>Calculadora: meta de citas → inversión para asegurarla</h2>
     <p class="section-note">Mueve la meta de citas confirmadas para noviembre y obtén la inversión recomendada. Ya viene cargada tu meta actual de 90 citas.</p>
-      <div class="calc-disclaimer-banner">
+      <div class="calc-disclaimer-banner admin-only">
         <div class="calc-disclaimer-icon">🛡️</div>
         <div class="calc-disclaimer-body">
           <p class="calc-disclaimer-title">INCLUYE MARGEN DE SEGURIDAD DE +20%</p>
@@ -1721,7 +1722,7 @@
         </div>
       </div>
       <p class="calc-floor" id="calcFloor_satelite" hidden>✓ Tu PP actual ($45,000 MXN) ya asegura esta meta. Sube la meta para ver cuánto necesitas para crecer. Nunca recomendamos bajar el presupuesto: es la base de tus resultados.</p>
-      <p class="calc-avg">Sin margen, en un mes promedio, la inversión sería de <b id="outAvg_satelite">$40,394 MXN</b>. El margen de +20% es lo que asegura la meta.</p>
+      <p class="calc-avg admin-only">Sin margen, en un mes promedio, la inversión sería de <b id="outAvg_satelite">$40,394 MXN</b>. El margen de +20% es lo que asegura la meta.</p>
       <div class="calc-proof">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
         <p><strong>Estos números no son una proyección al aire:</strong> salen del comportamiento real de Satélite en los meses cerrados del año (enero–septiembre 2026): 12,166 conversaciones, $412,467 MXN invertidos y 919 citas confirmadas por Contact Center. Eso equivale a $449 MXN de inversión por cita confirmada en promedio.</p>
@@ -1736,7 +1737,7 @@
     <div class="oct-goal">
       <div><p class="oct-goal-l">Tu meta de citas confirmadas</p><p class="oct-goal-v">90</p></div>
       <div><p class="oct-goal-l">Inversión recomendada</p><p class="oct-goal-v">$48,500 <small>MXN</small></p></div>
-      <div><p class="oct-goal-l">Margen de seguridad incluido</p><p class="oct-goal-v">+20%</p></div>
+      <div class="admin-only"><p class="oct-goal-l">Margen de seguridad incluido</p><p class="oct-goal-v">+20%</p></div>
     </div>
     <div class="oct-grid">
       <div class="oct-card reveal">
@@ -1745,7 +1746,7 @@
         <p class="oct-amount">$45,000 <small>MXN</small></p>
         <p class="oct-daily">$1,500 MXN diarios</p>
         <ul class="oct-list">
-          <li><span>Citas aseguradas (con margen)</span><b>~84</b></li>
+          <li><span>Citas aseguradas</span><b>~84</b></li>
           <li><span>En un mes promedio</span><b>~100</b></li>
           <li class="oct-warn"><span>Para asegurar 90 citas se recomiendan $48,500</span></li>
         </ul>
@@ -1757,7 +1758,7 @@
         <p class="oct-amount">$54,000 <small>MXN</small></p>
         <p class="oct-daily">$1,800 MXN diarios</p>
         <ul class="oct-list">
-          <li><span>Citas aseguradas (con margen)</span><b>~100</b></li>
+          <li><span>Citas aseguradas</span><b>~100</b></li>
           <li><span>En un mes promedio</span><b>~120</b></li>
           <li class="oct-ok"><span>✓ Asegura tu meta de 90 citas</span></li>
         </ul>
@@ -1769,14 +1770,14 @@
         <p class="oct-amount">$48,500 <small>MXN</small></p>
         <p class="oct-daily">$1,617 MXN diarios</p>
         <ul class="oct-list">
-          <li><span>Citas aseguradas (con margen)</span><b>~90</b></li>
+          <li><span>Citas aseguradas</span><b>~90</b></li>
           <li><span>En un mes promedio</span><b>~108</b></li>
           <li class="oct-ok"><span>✓ Asegura tu meta de 90 citas</span></li>
         </ul>
         <p class="oct-desc">Calculada para cumplir tu meta de 90 citas aunque el mes rinda por debajo del promedio. ¿Otra meta? Usa la <a href="#calc_satelite">calculadora</a>.</p>
       </div>
     </div>
-    <p class="section-note" style="margin:18px 0 0;">"Citas aseguradas" usa la inversión promedio por cita de enero–septiembre ($449 MXN) más el margen de seguridad de +20%. "En un mes promedio" es sin margen. Son referencias para planear, no una garantía de resultados.</p>
+    <p class="section-note" style="margin:18px 0 0;">Las citas aseguradas son una referencia para planear con base en tu desempeño real; no son una garantía de resultados.<span class="admin-only"> [Solo administrador] "Citas aseguradas" usa la inversión promedio por cita de enero–septiembre ($449 MXN) más el margen de seguridad de +20%. "En un mes promedio" es sin margen. Son referencias para planear, no una garantía de resultados.</span></p>
   </section>
 
   <footer>
@@ -2021,7 +2022,7 @@
   <section id="calc_valledorado">
     <h2>Calculadora: meta de citas → inversión para asegurarla</h2>
     <p class="section-note">Mueve la meta de citas confirmadas para noviembre y obtén la inversión recomendada. Ya viene cargada tu meta actual de 83 citas.</p>
-      <div class="calc-disclaimer-banner">
+      <div class="calc-disclaimer-banner admin-only">
         <div class="calc-disclaimer-icon">🛡️</div>
         <div class="calc-disclaimer-body">
           <p class="calc-disclaimer-title">INCLUYE MARGEN DE SEGURIDAD DE +31%</p>
@@ -2053,7 +2054,7 @@
         </div>
       </div>
       <p class="calc-floor" id="calcFloor_valledorado">✓ Tu PP actual ($50,000 MXN) ya asegura esta meta. Sube la meta para ver cuánto necesitas para crecer. Nunca recomendamos bajar el presupuesto: es la base de tus resultados.</p>
-      <p class="calc-avg">Sin margen, en un mes promedio, la inversión sería de <b id="outAvg_valledorado">$35,730 MXN</b>. El margen de +31% es lo que asegura la meta.</p>
+      <p class="calc-avg admin-only">Sin margen, en un mes promedio, la inversión sería de <b id="outAvg_valledorado">$35,730 MXN</b>. El margen de +31% es lo que asegura la meta.</p>
       <div class="calc-proof">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
         <p><strong>Estos números no son una proyección al aire:</strong> salen del comportamiento real de Valle Dorado en los meses cerrados del año (enero–septiembre 2026): 9,304 conversaciones, $364,186 MXN invertidos y 846 citas confirmadas por Contact Center. Eso equivale a $430 MXN de inversión por cita confirmada en promedio.</p>
@@ -2068,7 +2069,7 @@
     <div class="oct-goal">
       <div><p class="oct-goal-l">Tu meta de citas confirmadas</p><p class="oct-goal-v">83</p></div>
       <div><p class="oct-goal-l">Inversión recomendada</p><p class="oct-goal-v">$60,000 <small>MXN</small></p></div>
-      <div><p class="oct-goal-l">Margen de seguridad incluido</p><p class="oct-goal-v">+31%</p></div>
+      <div class="admin-only"><p class="oct-goal-l">Margen de seguridad incluido</p><p class="oct-goal-v">+31%</p></div>
     </div>
     <div class="oct-grid oct-grid-2">
       <div class="oct-card reveal">
@@ -2077,11 +2078,11 @@
         <p class="oct-amount">$50,000 <small>MXN</small></p>
         <p class="oct-daily">$1,667 MXN diarios</p>
         <ul class="oct-list">
-          <li><span>Citas aseguradas (con margen)</span><b>~88</b></li>
+          <li><span>Citas aseguradas</span><b>~88</b></li>
           <li><span>En un mes promedio</span><b>~116</b></li>
           <li class="oct-ok"><span>✓ Asegura tu meta de 83 citas</span></li>
         </ul>
-        <p class="oct-desc">Tu presupuesto actual ya asegura tu meta de 83 citas con margen de seguridad. Es la base para seguir creciendo.</p>
+        <p class="oct-desc">Tu presupuesto actual ya asegura tu meta de 83 citas. Es la base para seguir creciendo.</p>
       </div>
       <div class="oct-card oct-featured reveal">
         <p class="oct-tag">Opción B · Recomendada</p>
@@ -2089,14 +2090,14 @@
         <p class="oct-amount">$60,000 <small>MXN</small></p>
         <p class="oct-daily">$2,000 MXN diarios</p>
         <ul class="oct-list">
-          <li><span>Citas aseguradas (con margen)</span><b>~106</b></li>
+          <li><span>Citas aseguradas</span><b>~106</b></li>
           <li><span>En un mes promedio</span><b>~139</b></li>
           <li class="oct-ok"><span>✓ Asegura tu meta de 83 citas</span></li>
         </ul>
         <p class="oct-desc">Tu meta ya está cubierta: con +20% aseguras ~106 citas y llevas a Valle Dorado por encima de su meta.</p>
       </div>
     </div>
-    <p class="section-note" style="margin:18px 0 0;">"Citas aseguradas" usa la inversión promedio por cita de enero–septiembre ($430 MXN) más el margen de seguridad de +31%. "En un mes promedio" es sin margen. Son referencias para planear, no una garantía de resultados.</p>
+    <p class="section-note" style="margin:18px 0 0;">Las citas aseguradas son una referencia para planear con base en tu desempeño real; no son una garantía de resultados.<span class="admin-only"> [Solo administrador] "Citas aseguradas" usa la inversión promedio por cita de enero–septiembre ($430 MXN) más el margen de seguridad de +31%. "En un mes promedio" es sin margen. Son referencias para planear, no una garantía de resultados.</span></p>
   </section>
 
   <footer>
@@ -2341,7 +2342,7 @@
   <section id="calc_pachuca">
     <h2>Calculadora: meta de citas → inversión para asegurarla</h2>
     <p class="section-note">Mueve la meta de citas confirmadas para noviembre y obtén la inversión recomendada. Ya viene cargada tu meta actual de 80 citas.</p>
-      <div class="calc-disclaimer-banner">
+      <div class="calc-disclaimer-banner admin-only">
         <div class="calc-disclaimer-icon">🛡️</div>
         <div class="calc-disclaimer-body">
           <p class="calc-disclaimer-title">INCLUYE MARGEN DE SEGURIDAD DE +33%</p>
@@ -2373,7 +2374,7 @@
         </div>
       </div>
       <p class="calc-floor" id="calcFloor_pachuca">✓ Tu PP actual ($60,000 MXN) ya asegura esta meta. Sube la meta para ver cuánto necesitas para crecer. Nunca recomendamos bajar el presupuesto: es la base de tus resultados.</p>
-      <p class="calc-avg">Sin margen, en un mes promedio, la inversión sería de <b id="outAvg_pachuca">$30,154 MXN</b>. El margen de +33% es lo que asegura la meta.</p>
+      <p class="calc-avg admin-only">Sin margen, en un mes promedio, la inversión sería de <b id="outAvg_pachuca">$30,154 MXN</b>. El margen de +33% es lo que asegura la meta.</p>
       <div class="calc-proof">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
         <p><strong>Estos números no son una proyección al aire:</strong> salen del comportamiento real de Pachuca en los meses cerrados del año (enero–septiembre 2026): 11,957 conversaciones, $389,367 MXN invertidos y 1,033 citas confirmadas por Contact Center. Eso equivale a $377 MXN de inversión por cita confirmada en promedio.</p>
@@ -2388,7 +2389,7 @@
     <div class="oct-goal">
       <div><p class="oct-goal-l">Tu meta de citas confirmadas</p><p class="oct-goal-v">80</p></div>
       <div><p class="oct-goal-l">Inversión recomendada</p><p class="oct-goal-v">$72,000 <small>MXN</small></p></div>
-      <div><p class="oct-goal-l">Margen de seguridad incluido</p><p class="oct-goal-v">+33%</p></div>
+      <div class="admin-only"><p class="oct-goal-l">Margen de seguridad incluido</p><p class="oct-goal-v">+33%</p></div>
     </div>
     <div class="oct-grid oct-grid-2">
       <div class="oct-card reveal">
@@ -2397,11 +2398,11 @@
         <p class="oct-amount">$60,000 <small>MXN</small></p>
         <p class="oct-daily">$2,000 MXN diarios</p>
         <ul class="oct-list">
-          <li><span>Citas aseguradas (con margen)</span><b>~119</b></li>
+          <li><span>Citas aseguradas</span><b>~119</b></li>
           <li><span>En un mes promedio</span><b>~159</b></li>
           <li class="oct-ok"><span>✓ Asegura tu meta de 80 citas</span></li>
         </ul>
-        <p class="oct-desc">Tu presupuesto actual ya asegura tu meta de 80 citas con margen de seguridad. Es la base para seguir creciendo.</p>
+        <p class="oct-desc">Tu presupuesto actual ya asegura tu meta de 80 citas. Es la base para seguir creciendo.</p>
       </div>
       <div class="oct-card oct-featured reveal">
         <p class="oct-tag">Opción B · Recomendada</p>
@@ -2409,14 +2410,14 @@
         <p class="oct-amount">$72,000 <small>MXN</small></p>
         <p class="oct-daily">$2,400 MXN diarios</p>
         <ul class="oct-list">
-          <li><span>Citas aseguradas (con margen)</span><b>~143</b></li>
+          <li><span>Citas aseguradas</span><b>~143</b></li>
           <li><span>En un mes promedio</span><b>~191</b></li>
           <li class="oct-ok"><span>✓ Asegura tu meta de 80 citas</span></li>
         </ul>
         <p class="oct-desc">Tu meta ya está cubierta: con +20% aseguras ~143 citas y llevas a Pachuca por encima de su meta.</p>
       </div>
     </div>
-    <p class="section-note" style="margin:18px 0 0;">"Citas aseguradas" usa la inversión promedio por cita de enero–septiembre ($377 MXN) más el margen de seguridad de +33%. "En un mes promedio" es sin margen. Son referencias para planear, no una garantía de resultados.</p>
+    <p class="section-note" style="margin:18px 0 0;">Las citas aseguradas son una referencia para planear con base en tu desempeño real; no son una garantía de resultados.<span class="admin-only"> [Solo administrador] "Citas aseguradas" usa la inversión promedio por cita de enero–septiembre ($377 MXN) más el margen de seguridad de +33%. "En un mes promedio" es sin margen. Son referencias para planear, no una garantía de resultados.</span></p>
   </section>
 
   <footer>
@@ -2661,7 +2662,7 @@
   <section id="calc_nicolasromero">
     <h2>Calculadora: meta de citas → inversión para asegurarla</h2>
     <p class="section-note">Mueve la meta de citas confirmadas para noviembre y obtén la inversión recomendada. Ya viene cargada tu meta actual de 92 citas.</p>
-      <div class="calc-disclaimer-banner">
+      <div class="calc-disclaimer-banner admin-only">
         <div class="calc-disclaimer-icon">🛡️</div>
         <div class="calc-disclaimer-body">
           <p class="calc-disclaimer-title">INCLUYE MARGEN DE SEGURIDAD DE +40%</p>
@@ -2693,7 +2694,7 @@
         </div>
       </div>
       <p class="calc-floor" id="calcFloor_nicolasromero" hidden>✓ Tu PP actual ($45,000 MXN) ya asegura esta meta. Sube la meta para ver cuánto necesitas para crecer. Nunca recomendamos bajar el presupuesto: es la base de tus resultados.</p>
-      <p class="calc-avg">Sin margen, en un mes promedio, la inversión sería de <b id="outAvg_nicolasromero">$37,013 MXN</b>. El margen de +40% es lo que asegura la meta.</p>
+      <p class="calc-avg admin-only">Sin margen, en un mes promedio, la inversión sería de <b id="outAvg_nicolasromero">$37,013 MXN</b>. El margen de +40% es lo que asegura la meta.</p>
       <div class="calc-proof">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
         <p><strong>Estos números no son una proyección al aire:</strong> salen del comportamiento real de Nicolás Romero en los meses cerrados del año (enero–septiembre 2026): 10,769 conversaciones, $381,397 MXN invertidos y 948 citas confirmadas por Contact Center. Eso equivale a $402 MXN de inversión por cita confirmada en promedio.</p>
@@ -2708,7 +2709,7 @@
     <div class="oct-goal">
       <div><p class="oct-goal-l">Tu meta de citas confirmadas</p><p class="oct-goal-v">92</p></div>
       <div><p class="oct-goal-l">Inversión recomendada</p><p class="oct-goal-v">$52,000 <small>MXN</small></p></div>
-      <div><p class="oct-goal-l">Margen de seguridad incluido</p><p class="oct-goal-v">+40%</p></div>
+      <div class="admin-only"><p class="oct-goal-l">Margen de seguridad incluido</p><p class="oct-goal-v">+40%</p></div>
     </div>
     <div class="oct-grid">
       <div class="oct-card reveal">
@@ -2717,7 +2718,7 @@
         <p class="oct-amount">$45,000 <small>MXN</small></p>
         <p class="oct-daily">$1,500 MXN diarios</p>
         <ul class="oct-list">
-          <li><span>Citas aseguradas (con margen)</span><b>~80</b></li>
+          <li><span>Citas aseguradas</span><b>~80</b></li>
           <li><span>En un mes promedio</span><b>~112</b></li>
           <li class="oct-warn"><span>Para asegurar 92 citas se recomiendan $52,000</span></li>
         </ul>
@@ -2729,7 +2730,7 @@
         <p class="oct-amount">$54,000 <small>MXN</small></p>
         <p class="oct-daily">$1,800 MXN diarios</p>
         <ul class="oct-list">
-          <li><span>Citas aseguradas (con margen)</span><b>~96</b></li>
+          <li><span>Citas aseguradas</span><b>~96</b></li>
           <li><span>En un mes promedio</span><b>~134</b></li>
           <li class="oct-ok"><span>✓ Asegura tu meta de 92 citas</span></li>
         </ul>
@@ -2741,14 +2742,14 @@
         <p class="oct-amount">$52,000 <small>MXN</small></p>
         <p class="oct-daily">$1,733 MXN diarios</p>
         <ul class="oct-list">
-          <li><span>Citas aseguradas (con margen)</span><b>~92</b></li>
+          <li><span>Citas aseguradas</span><b>~92</b></li>
           <li><span>En un mes promedio</span><b>~129</b></li>
           <li class="oct-ok"><span>✓ Asegura tu meta de 92 citas</span></li>
         </ul>
         <p class="oct-desc">Calculada para cumplir tu meta de 92 citas aunque el mes rinda por debajo del promedio. ¿Otra meta? Usa la <a href="#calc_nicolasromero">calculadora</a>.</p>
       </div>
     </div>
-    <p class="section-note" style="margin:18px 0 0;">"Citas aseguradas" usa la inversión promedio por cita de enero–septiembre ($402 MXN) más el margen de seguridad de +40%. "En un mes promedio" es sin margen. Son referencias para planear, no una garantía de resultados.</p>
+    <p class="section-note" style="margin:18px 0 0;">Las citas aseguradas son una referencia para planear con base en tu desempeño real; no son una garantía de resultados.<span class="admin-only"> [Solo administrador] "Citas aseguradas" usa la inversión promedio por cita de enero–septiembre ($402 MXN) más el margen de seguridad de +40%. "En un mes promedio" es sin margen. Son referencias para planear, no una garantía de resultados.</span></p>
   </section>
 
   <footer>
@@ -2993,7 +2994,7 @@
   <section id="calc_queretaro">
     <h2>Calculadora: meta de citas → inversión para asegurarla</h2>
     <p class="section-note">Mueve la meta de citas confirmadas para noviembre y obtén la inversión recomendada. Ya viene cargada tu meta actual de 105 citas.</p>
-      <div class="calc-disclaimer-banner">
+      <div class="calc-disclaimer-banner admin-only">
         <div class="calc-disclaimer-icon">🛡️</div>
         <div class="calc-disclaimer-body">
           <p class="calc-disclaimer-title">INCLUYE MARGEN DE SEGURIDAD DE +40%</p>
@@ -3025,7 +3026,7 @@
         </div>
       </div>
       <p class="calc-floor" id="calcFloor_queretaro" hidden>✓ Tu PP actual ($30,000 MXN) ya asegura esta meta. Sube la meta para ver cuánto necesitas para crecer. Nunca recomendamos bajar el presupuesto: es la base de tus resultados.</p>
-      <p class="calc-avg">Sin margen, en un mes promedio, la inversión sería de <b id="outAvg_queretaro">$21,316 MXN</b>. El margen de +40% es lo que asegura la meta.</p>
+      <p class="calc-avg admin-only">Sin margen, en un mes promedio, la inversión sería de <b id="outAvg_queretaro">$21,316 MXN</b>. El margen de +40% es lo que asegura la meta.</p>
       <div class="calc-proof">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
         <p><strong>Estos números no son una proyección al aire:</strong> salen del comportamiento real de Querétaro en los meses cerrados del año (enero–septiembre 2026): 11,643 conversaciones, $186,365 MXN invertidos y 918 citas confirmadas por Contact Center. Eso equivale a $203 MXN de inversión por cita confirmada en promedio.</p>
@@ -3040,7 +3041,7 @@
     <div class="oct-goal">
       <div><p class="oct-goal-l">Tu meta de citas confirmadas</p><p class="oct-goal-v">105</p></div>
       <div><p class="oct-goal-l">Inversión recomendada</p><p class="oct-goal-v">$36,000 <small>MXN</small></p></div>
-      <div><p class="oct-goal-l">Margen de seguridad incluido</p><p class="oct-goal-v">+40%</p></div>
+      <div class="admin-only"><p class="oct-goal-l">Margen de seguridad incluido</p><p class="oct-goal-v">+40%</p></div>
     </div>
     <div class="oct-grid oct-grid-2">
       <div class="oct-card reveal">
@@ -3049,11 +3050,11 @@
         <p class="oct-amount">$30,000 <small>MXN</small></p>
         <p class="oct-daily">$1,000 MXN diarios</p>
         <ul class="oct-list">
-          <li><span>Citas aseguradas (con margen)</span><b>~106</b></li>
+          <li><span>Citas aseguradas</span><b>~106</b></li>
           <li><span>En un mes promedio</span><b>~148</b></li>
           <li class="oct-ok"><span>✓ Asegura tu meta de 105 citas</span></li>
         </ul>
-        <p class="oct-desc">Tu presupuesto actual ya asegura tu meta de 105 citas con margen de seguridad. Es la base para seguir creciendo.</p>
+        <p class="oct-desc">Tu presupuesto actual ya asegura tu meta de 105 citas. Es la base para seguir creciendo.</p>
       </div>
       <div class="oct-card oct-featured reveal">
         <p class="oct-tag">Opción B · Recomendada</p>
@@ -3061,14 +3062,14 @@
         <p class="oct-amount">$36,000 <small>MXN</small></p>
         <p class="oct-daily">$1,200 MXN diarios</p>
         <ul class="oct-list">
-          <li><span>Citas aseguradas (con margen)</span><b>~127</b></li>
+          <li><span>Citas aseguradas</span><b>~127</b></li>
           <li><span>En un mes promedio</span><b>~177</b></li>
           <li class="oct-ok"><span>✓ Asegura tu meta de 105 citas</span></li>
         </ul>
         <p class="oct-desc">Tu meta ya está cubierta: con +20% aseguras ~127 citas y llevas a Querétaro por encima de su meta.</p>
       </div>
     </div>
-    <p class="section-note" style="margin:18px 0 0;">"Citas aseguradas" usa la inversión promedio por cita de enero–septiembre ($203 MXN) más el margen de seguridad de +40%. "En un mes promedio" es sin margen. Son referencias para planear, no una garantía de resultados.</p>
+    <p class="section-note" style="margin:18px 0 0;">Las citas aseguradas son una referencia para planear con base en tu desempeño real; no son una garantía de resultados.<span class="admin-only"> [Solo administrador] "Citas aseguradas" usa la inversión promedio por cita de enero–septiembre ($203 MXN) más el margen de seguridad de +40%. "En un mes promedio" es sin margen. Son referencias para planear, no una garantía de resultados.</span></p>
   </section>
 
   <footer>
@@ -3313,7 +3314,7 @@
   <section id="calc_sanjuan">
     <h2>Calculadora: meta de citas → inversión para asegurarla</h2>
     <p class="section-note">Mueve la meta de citas confirmadas para noviembre y obtén la inversión recomendada. Ya viene cargada tu meta actual de 80 citas.</p>
-      <div class="calc-disclaimer-banner">
+      <div class="calc-disclaimer-banner admin-only">
         <div class="calc-disclaimer-icon">🛡️</div>
         <div class="calc-disclaimer-body">
           <p class="calc-disclaimer-title">INCLUYE MARGEN DE SEGURIDAD DE +40%</p>
@@ -3345,7 +3346,7 @@
         </div>
       </div>
       <p class="calc-floor" id="calcFloor_sanjuan">✓ Tu PP actual ($37,000 MXN) ya asegura esta meta. Sube la meta para ver cuánto necesitas para crecer. Nunca recomendamos bajar el presupuesto: es la base de tus resultados.</p>
-      <p class="calc-avg">Sin margen, en un mes promedio, la inversión sería de <b id="outAvg_sanjuan">$25,949 MXN</b>. El margen de +40% es lo que asegura la meta.</p>
+      <p class="calc-avg admin-only">Sin margen, en un mes promedio, la inversión sería de <b id="outAvg_sanjuan">$25,949 MXN</b>. El margen de +40% es lo que asegura la meta.</p>
       <div class="calc-proof">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
         <p><strong>Estos números no son una proyección al aire:</strong> salen del comportamiento real de San Juan del Río en los meses cerrados del año (enero–septiembre 2026): 5,568 conversaciones, $234,512 MXN invertidos y 723 citas confirmadas por Contact Center. Eso equivale a $324 MXN de inversión por cita confirmada en promedio.</p>
@@ -3360,7 +3361,7 @@
     <div class="oct-goal">
       <div><p class="oct-goal-l">Tu meta de citas confirmadas</p><p class="oct-goal-v">80</p></div>
       <div><p class="oct-goal-l">Inversión recomendada</p><p class="oct-goal-v">$44,400 <small>MXN</small></p></div>
-      <div><p class="oct-goal-l">Margen de seguridad incluido</p><p class="oct-goal-v">+40%</p></div>
+      <div class="admin-only"><p class="oct-goal-l">Margen de seguridad incluido</p><p class="oct-goal-v">+40%</p></div>
     </div>
     <div class="oct-grid oct-grid-2">
       <div class="oct-card reveal">
@@ -3369,11 +3370,11 @@
         <p class="oct-amount">$37,000 <small>MXN</small></p>
         <p class="oct-daily">$1,233 MXN diarios</p>
         <ul class="oct-list">
-          <li><span>Citas aseguradas (con margen)</span><b>~81</b></li>
+          <li><span>Citas aseguradas</span><b>~81</b></li>
           <li><span>En un mes promedio</span><b>~114</b></li>
           <li class="oct-ok"><span>✓ Asegura tu meta de 80 citas</span></li>
         </ul>
-        <p class="oct-desc">Tu presupuesto actual ya asegura tu meta de 80 citas con margen de seguridad. Es la base para seguir creciendo.</p>
+        <p class="oct-desc">Tu presupuesto actual ya asegura tu meta de 80 citas. Es la base para seguir creciendo.</p>
       </div>
       <div class="oct-card oct-featured reveal">
         <p class="oct-tag">Opción B · Recomendada</p>
@@ -3381,14 +3382,14 @@
         <p class="oct-amount">$44,400 <small>MXN</small></p>
         <p class="oct-daily">$1,480 MXN diarios</p>
         <ul class="oct-list">
-          <li><span>Citas aseguradas (con margen)</span><b>~98</b></li>
+          <li><span>Citas aseguradas</span><b>~98</b></li>
           <li><span>En un mes promedio</span><b>~137</b></li>
           <li class="oct-ok"><span>✓ Asegura tu meta de 80 citas</span></li>
         </ul>
         <p class="oct-desc">Tu meta ya está cubierta: con +20% aseguras ~98 citas y llevas a San Juan del Río por encima de su meta.</p>
       </div>
     </div>
-    <p class="section-note" style="margin:18px 0 0;">"Citas aseguradas" usa la inversión promedio por cita de enero–septiembre ($324 MXN) más el margen de seguridad de +40%. "En un mes promedio" es sin margen. Son referencias para planear, no una garantía de resultados.</p>
+    <p class="section-note" style="margin:18px 0 0;">Las citas aseguradas son una referencia para planear con base en tu desempeño real; no son una garantía de resultados.<span class="admin-only"> [Solo administrador] "Citas aseguradas" usa la inversión promedio por cita de enero–septiembre ($324 MXN) más el margen de seguridad de +40%. "En un mes promedio" es sin margen. Son referencias para planear, no una garantía de resultados.</span></p>
   </section>
 
   <footer>
@@ -3633,7 +3634,7 @@
   <section id="calc_xochimilco">
     <h2>Calculadora: meta de citas → inversión para asegurarla</h2>
     <p class="section-note">Mueve la meta de citas confirmadas para noviembre y obtén la inversión recomendada. Ya viene cargada tu meta actual de 112 citas.</p>
-      <div class="calc-disclaimer-banner">
+      <div class="calc-disclaimer-banner admin-only">
         <div class="calc-disclaimer-icon">🛡️</div>
         <div class="calc-disclaimer-body">
           <p class="calc-disclaimer-title">INCLUYE MARGEN DE SEGURIDAD DE +40%</p>
@@ -3665,7 +3666,7 @@
         </div>
       </div>
       <p class="calc-floor" id="calcFloor_xochimilco" hidden>✓ Tu PP actual ($48,000 MXN) ya asegura esta meta. Sube la meta para ver cuánto necesitas para crecer. Nunca recomendamos bajar el presupuesto: es la base de tus resultados.</p>
-      <p class="calc-avg">Sin margen, en un mes promedio, la inversión sería de <b id="outAvg_xochimilco">$34,021 MXN</b>. El margen de +40% es lo que asegura la meta.</p>
+      <p class="calc-avg admin-only">Sin margen, en un mes promedio, la inversión sería de <b id="outAvg_xochimilco">$34,021 MXN</b>. El margen de +40% es lo que asegura la meta.</p>
       <div class="calc-proof">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
         <p><strong>Estos números no son una proyección al aire:</strong> salen del comportamiento real de Xochimilco en los meses cerrados del año (enero–septiembre 2026): 7,536 conversaciones, $314,695 MXN invertidos y 1,036 citas confirmadas por Contact Center. Eso equivale a $304 MXN de inversión por cita confirmada en promedio.</p>
@@ -3680,7 +3681,7 @@
     <div class="oct-goal">
       <div><p class="oct-goal-l">Tu meta de citas confirmadas</p><p class="oct-goal-v">112</p></div>
       <div><p class="oct-goal-l">Inversión recomendada</p><p class="oct-goal-v">$57,600 <small>MXN</small></p></div>
-      <div><p class="oct-goal-l">Margen de seguridad incluido</p><p class="oct-goal-v">+40%</p></div>
+      <div class="admin-only"><p class="oct-goal-l">Margen de seguridad incluido</p><p class="oct-goal-v">+40%</p></div>
     </div>
     <div class="oct-grid oct-grid-2">
       <div class="oct-card reveal">
@@ -3689,11 +3690,11 @@
         <p class="oct-amount">$48,000 <small>MXN</small></p>
         <p class="oct-daily">$1,600 MXN diarios</p>
         <ul class="oct-list">
-          <li><span>Citas aseguradas (con margen)</span><b>~113</b></li>
+          <li><span>Citas aseguradas</span><b>~113</b></li>
           <li><span>En un mes promedio</span><b>~158</b></li>
           <li class="oct-ok"><span>✓ Asegura tu meta de 112 citas</span></li>
         </ul>
-        <p class="oct-desc">Tu presupuesto actual ya asegura tu meta de 112 citas con margen de seguridad. Es la base para seguir creciendo.</p>
+        <p class="oct-desc">Tu presupuesto actual ya asegura tu meta de 112 citas. Es la base para seguir creciendo.</p>
       </div>
       <div class="oct-card oct-featured reveal">
         <p class="oct-tag">Opción B · Recomendada</p>
@@ -3701,14 +3702,14 @@
         <p class="oct-amount">$57,600 <small>MXN</small></p>
         <p class="oct-daily">$1,920 MXN diarios</p>
         <ul class="oct-list">
-          <li><span>Citas aseguradas (con margen)</span><b>~135</b></li>
+          <li><span>Citas aseguradas</span><b>~135</b></li>
           <li><span>En un mes promedio</span><b>~190</b></li>
           <li class="oct-ok"><span>✓ Asegura tu meta de 112 citas</span></li>
         </ul>
         <p class="oct-desc">Tu meta ya está cubierta: con +20% aseguras ~135 citas y llevas a Xochimilco por encima de su meta.</p>
       </div>
     </div>
-    <p class="section-note" style="margin:18px 0 0;">"Citas aseguradas" usa la inversión promedio por cita de enero–septiembre ($304 MXN) más el margen de seguridad de +40%. "En un mes promedio" es sin margen. Son referencias para planear, no una garantía de resultados.</p>
+    <p class="section-note" style="margin:18px 0 0;">Las citas aseguradas son una referencia para planear con base en tu desempeño real; no son una garantía de resultados.<span class="admin-only"> [Solo administrador] "Citas aseguradas" usa la inversión promedio por cita de enero–septiembre ($304 MXN) más el margen de seguridad de +40%. "En un mes promedio" es sin margen. Son referencias para planear, no una garantía de resultados.</span></p>
   </section>
 
   <footer>
@@ -3937,7 +3938,7 @@
   <section id="calc_cuautitlan">
     <h2>Calculadora: meta de citas → inversión para asegurarla</h2>
     <p class="section-note">Mueve la meta de citas confirmadas para noviembre y obtén la inversión recomendada. Ya viene cargada tu meta actual de 100 citas.</p>
-      <div class="calc-disclaimer-banner">
+      <div class="calc-disclaimer-banner admin-only">
         <div class="calc-disclaimer-icon">🛡️</div>
         <div class="calc-disclaimer-body">
           <p class="calc-disclaimer-title">INCLUYE MARGEN DE SEGURIDAD DE +8%</p>
@@ -3969,7 +3970,7 @@
         </div>
       </div>
       <p class="calc-floor" id="calcFloor_cuautitlan" hidden>✓ Tu PP actual ($35,000 MXN) ya asegura esta meta. Sube la meta para ver cuánto necesitas para crecer. Nunca recomendamos bajar el presupuesto: es la base de tus resultados.</p>
-      <p class="calc-avg">Sin margen, en un mes promedio, la inversión sería de <b id="outAvg_cuautitlan">$35,000 MXN</b>. El margen de +8% es lo que asegura la meta.</p>
+      <p class="calc-avg admin-only">Sin margen, en un mes promedio, la inversión sería de <b id="outAvg_cuautitlan">$35,000 MXN</b>. El margen de +8% es lo que asegura la meta.</p>
       <div class="calc-proof">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
         <p><strong>Estos números no son una proyección al aire:</strong> salen del comportamiento real de Cuautitlán en los meses cerrados del año (abril–septiembre 2026): 6,543 conversaciones, $177,567 MXN invertidos y 654 citas confirmadas por Contact Center. Con base en este comportamiento y el ritmo actual de la clínica, la calculadora usa $350 MXN por cita en un mes promedio.</p>
@@ -4010,7 +4011,7 @@
         <p class="oct-desc">Más inversión para sumar volumen de pacientes y llevar a Cuautitlán a su siguiente nivel: hasta ~150 citas en un buen mes.</p>
       </div>
     </div>
-    <p class="section-note" style="margin:18px 0 0;">Los rangos de citas se basan en el comportamiento reciente de Cuautitlán. Son referencias para planear, no una garantía de resultados.</p>
+    <p class="section-note" style="margin:18px 0 0;">Los rangos de citas se basan en el comportamiento reciente de Cuautitlán. Son referencias para planear, no una garantía de resultados.<span class="admin-only"> </span></p>
   </section>
 
   <footer>
@@ -4255,7 +4256,7 @@
   <section id="calc_tepeyac">
     <h2>Calculadora: meta de citas → inversión para asegurarla</h2>
     <p class="section-note">Mueve la meta de citas confirmadas para noviembre y obtén la inversión recomendada. Ya viene cargada tu meta actual de 99 citas.</p>
-      <div class="calc-disclaimer-banner">
+      <div class="calc-disclaimer-banner admin-only">
         <div class="calc-disclaimer-icon">🛡️</div>
         <div class="calc-disclaimer-body">
           <p class="calc-disclaimer-title">INCLUYE MARGEN DE SEGURIDAD DE +26%</p>
@@ -4287,7 +4288,7 @@
         </div>
       </div>
       <p class="calc-floor" id="calcFloor_tepeyac" hidden>✓ Tu PP actual ($50,000 MXN) ya asegura esta meta. Sube la meta para ver cuánto necesitas para crecer. Nunca recomendamos bajar el presupuesto: es la base de tus resultados.</p>
-      <p class="calc-avg">Sin margen, en un mes promedio, la inversión sería de <b id="outAvg_tepeyac">$39,597 MXN</b>. El margen de +26% es lo que asegura la meta.</p>
+      <p class="calc-avg admin-only">Sin margen, en un mes promedio, la inversión sería de <b id="outAvg_tepeyac">$39,597 MXN</b>. El margen de +26% es lo que asegura la meta.</p>
       <div class="calc-proof">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
         <p><strong>Estos números no son una proyección al aire:</strong> salen del comportamiento real de Tepeyac en los meses cerrados del año (enero–septiembre 2026): 9,663 conversaciones, $309,975 MXN invertidos y 775 citas generadas por tu operador. Eso equivale a $400 MXN de inversión por cita de tu operador en promedio.</p>
@@ -4302,7 +4303,7 @@
     <div class="oct-goal">
       <div><p class="oct-goal-l">Tu meta de citas confirmadas</p><p class="oct-goal-v">99</p></div>
       <div><p class="oct-goal-l">Inversión recomendada</p><p class="oct-goal-v">$60,000 <small>MXN</small></p></div>
-      <div><p class="oct-goal-l">Margen de seguridad incluido</p><p class="oct-goal-v">+26%</p></div>
+      <div class="admin-only"><p class="oct-goal-l">Margen de seguridad incluido</p><p class="oct-goal-v">+26%</p></div>
     </div>
     <div class="oct-grid oct-grid-2">
       <div class="oct-card reveal">
@@ -4311,11 +4312,11 @@
         <p class="oct-amount">$50,000 <small>MXN</small></p>
         <p class="oct-daily">$1,667 MXN diarios</p>
         <ul class="oct-list">
-          <li><span>Citas aseguradas (con margen)</span><b>~99</b></li>
+          <li><span>Citas aseguradas</span><b>~99</b></li>
           <li><span>En un mes promedio</span><b>~125</b></li>
           <li class="oct-ok"><span>✓ Asegura tu meta de 99 citas</span></li>
         </ul>
-        <p class="oct-desc">Tu presupuesto actual ya asegura tu meta de 99 citas con margen de seguridad. Es la base para seguir creciendo.</p>
+        <p class="oct-desc">Tu presupuesto actual ya asegura tu meta de 99 citas. Es la base para seguir creciendo.</p>
       </div>
       <div class="oct-card oct-featured reveal">
         <p class="oct-tag">Opción B · Recomendada</p>
@@ -4323,14 +4324,14 @@
         <p class="oct-amount">$60,000 <small>MXN</small></p>
         <p class="oct-daily">$2,000 MXN diarios</p>
         <ul class="oct-list">
-          <li><span>Citas aseguradas (con margen)</span><b>~119</b></li>
+          <li><span>Citas aseguradas</span><b>~119</b></li>
           <li><span>En un mes promedio</span><b>~150</b></li>
           <li class="oct-ok"><span>✓ Asegura tu meta de 99 citas</span></li>
         </ul>
         <p class="oct-desc">Tu meta ya está cubierta: con +20% aseguras ~119 citas y llevas a Tepeyac por encima de su meta.</p>
       </div>
     </div>
-    <p class="section-note" style="margin:18px 0 0;">"Citas aseguradas" usa la inversión promedio por cita de enero–septiembre ($400 MXN) más el margen de seguridad de +26%. "En un mes promedio" es sin margen. Son referencias para planear, no una garantía de resultados.</p>
+    <p class="section-note" style="margin:18px 0 0;">Las citas aseguradas son una referencia para planear con base en tu desempeño real; no son una garantía de resultados.<span class="admin-only"> [Solo administrador] "Citas aseguradas" usa la inversión promedio por cita de enero–septiembre ($400 MXN) más el margen de seguridad de +26%. "En un mes promedio" es sin margen. Son referencias para planear, no una garantía de resultados.</span></p>
   </section>
 
   <footer>
@@ -4575,7 +4576,7 @@
   <section id="calc_cuautla">
     <h2>Calculadora: meta de citas → inversión para asegurarla</h2>
     <p class="section-note">Mueve la meta de citas confirmadas para noviembre y obtén la inversión recomendada. Ya viene cargada tu meta actual de 87 citas.</p>
-      <div class="calc-disclaimer-banner">
+      <div class="calc-disclaimer-banner admin-only">
         <div class="calc-disclaimer-icon">🛡️</div>
         <div class="calc-disclaimer-body">
           <p class="calc-disclaimer-title">INCLUYE MARGEN DE SEGURIDAD DE +20%</p>
@@ -4607,7 +4608,7 @@
         </div>
       </div>
       <p class="calc-floor" id="calcFloor_cuautla" hidden>✓ Tu PP actual ($30,000 MXN) ya asegura esta meta. Sube la meta para ver cuánto necesitas para crecer. Nunca recomendamos bajar el presupuesto: es la base de tus resultados.</p>
-      <p class="calc-avg">Sin margen, en un mes promedio, la inversión sería de <b id="outAvg_cuautla">$24,981 MXN</b>. El margen de +20% es lo que asegura la meta.</p>
+      <p class="calc-avg admin-only">Sin margen, en un mes promedio, la inversión sería de <b id="outAvg_cuautla">$24,981 MXN</b>. El margen de +20% es lo que asegura la meta.</p>
       <div class="calc-proof">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
         <p><strong>Estos números no son una proyección al aire:</strong> salen del comportamiento real de Cuautla en los meses cerrados del año (enero–septiembre 2026): 7,644 conversaciones, $187,503 MXN invertidos y 653 citas confirmadas por Contact Center. Eso equivale a $287 MXN de inversión por cita confirmada en promedio.</p>
@@ -4622,7 +4623,7 @@
     <div class="oct-goal">
       <div><p class="oct-goal-l">Tu meta de citas confirmadas</p><p class="oct-goal-v">87</p></div>
       <div><p class="oct-goal-l">Inversión recomendada</p><p class="oct-goal-v">$36,000 <small>MXN</small></p></div>
-      <div><p class="oct-goal-l">Margen de seguridad incluido</p><p class="oct-goal-v">+20%</p></div>
+      <div class="admin-only"><p class="oct-goal-l">Margen de seguridad incluido</p><p class="oct-goal-v">+20%</p></div>
     </div>
     <div class="oct-grid oct-grid-2">
       <div class="oct-card reveal">
@@ -4631,11 +4632,11 @@
         <p class="oct-amount">$30,000 <small>MXN</small></p>
         <p class="oct-daily">$1,000 MXN diarios</p>
         <ul class="oct-list">
-          <li><span>Citas aseguradas (con margen)</span><b>~87</b></li>
+          <li><span>Citas aseguradas</span><b>~87</b></li>
           <li><span>En un mes promedio</span><b>~104</b></li>
           <li class="oct-ok"><span>✓ Asegura tu meta de 87 citas</span></li>
         </ul>
-        <p class="oct-desc">Tu presupuesto actual ya asegura tu meta de 87 citas con margen de seguridad. Es la base para seguir creciendo.</p>
+        <p class="oct-desc">Tu presupuesto actual ya asegura tu meta de 87 citas. Es la base para seguir creciendo.</p>
       </div>
       <div class="oct-card oct-featured reveal">
         <p class="oct-tag">Opción B · Recomendada</p>
@@ -4643,14 +4644,14 @@
         <p class="oct-amount">$36,000 <small>MXN</small></p>
         <p class="oct-daily">$1,200 MXN diarios</p>
         <ul class="oct-list">
-          <li><span>Citas aseguradas (con margen)</span><b>~104</b></li>
+          <li><span>Citas aseguradas</span><b>~104</b></li>
           <li><span>En un mes promedio</span><b>~125</b></li>
           <li class="oct-ok"><span>✓ Asegura tu meta de 87 citas</span></li>
         </ul>
         <p class="oct-desc">Tu meta ya está cubierta: con +20% aseguras ~104 citas y llevas a Cuautla por encima de su meta.</p>
       </div>
     </div>
-    <p class="section-note" style="margin:18px 0 0;">"Citas aseguradas" usa la inversión promedio por cita de enero–septiembre ($287 MXN) más el margen de seguridad de +20%. "En un mes promedio" es sin margen. Son referencias para planear, no una garantía de resultados.</p>
+    <p class="section-note" style="margin:18px 0 0;">Las citas aseguradas son una referencia para planear con base en tu desempeño real; no son una garantía de resultados.<span class="admin-only"> [Solo administrador] "Citas aseguradas" usa la inversión promedio por cita de enero–septiembre ($287 MXN) más el margen de seguridad de +20%. "En un mes promedio" es sin margen. Son referencias para planear, no una garantía de resultados.</span></p>
   </section>
 
   <footer>
@@ -4958,6 +4959,7 @@
     sessionStorage.removeItem('eth_admin');
     sessionStorage.removeItem('eth_admin_fr');
     document.getElementById('adminBar').classList.remove('show');
+    document.body.classList.remove('is-admin');
     document.querySelectorAll('.report-page').forEach(el => el.classList.remove('active'));
     document.getElementById('lockScreen').classList.remove('hidden-screen');
     window.scrollTo(0, 0);
@@ -5135,6 +5137,7 @@
   function enterAdmin(fr){
     const sel = document.getElementById('adminSelect');
     document.getElementById('adminBar').classList.add('show');
+    document.body.classList.add('is-admin');
     sel.value = fr || sel.value;
     unlockReport(sel.value);
   }
